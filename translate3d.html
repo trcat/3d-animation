@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>translate3d</title>
+  <style>
+    body {display: flex; justify-content: center; align-items: center;height: 100vh;}
+    .container {perspective: 550px;width: 100px;height: 100px;}
+    .square {position: relative; transform-style: preserve-3d;width: 100%;height: 100%;}
+    .square div {width: 100%; height: 100%;font-weight: bold;font-size: 70px; line-height: 100px; text-align: center;position: absolute;}
+    .square .font {background-color: rgba(90, 90, 90, 0.7);transform: translate3d(0,0,50px);}
+    .square .back {background-color: rgba(0, 217, 0, 0.7); transform: rotateY(180deg) translate3d(0,0,50px);}
+    .square .right {background-color: rgba(217, 0, 0, 0.7);}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="square">
+      <div class="font">1</div>
+      <div class="back">2</div>
+      <div class="right">3</div>
+      <!-- <div class="left">4</div>
+      <div class="bottom">5</div>
+      <div class="right">6</div> -->
+    </div>
+  </div>
+</body>
+</html>
