@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3d word</title>
+  <style>
+    :root {
+      background-color: #FFCD00;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 100px;
+      perspective: 5000px;
+    }
+
+    @keyframes rotate {
+      0%, 100% {
+        transform: rotate3d(0, 1, 0, -20deg);
+      }
+      50% {
+        transform: rotate3d(0, 1, 0, 20deg);
+      }
+    }
+
+    @keyframes h1-before {
+      0%, 100% {
+        transform: translate3d(10px, 5px, -10px);
+      }
+      50% {
+        transform: translate3d(-10px, 5px, -10px);
+      }
+    }
+
+    @keyframes h1-after {
+      0%, 100% {
+        transform: translate3d(20px, 10px, -20px);
+      }
+      50% {
+        transform: translate3d(-20px, 10px, -20px);
+      }
+    }
+
+    h1 {
+      color: #fff;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      animation: rotate 5s ease-in-out infinite;
+    }
+
+    h1::before,
+    h1::after {
+      content: 'Hello-World';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    
+    h1::before {
+      color: #009cde;
+      animation: h1-before 5s ease-in-out infinite;
+    }
+
+    h1::after {
+      color: #003c71;
+      animation: h1-after 5s ease-in-out infinite;
+      z-index: -2;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello-World</h1>
+</body>
+
+</html>
