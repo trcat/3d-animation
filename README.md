@@ -3,3 +3,4 @@
 
 ## 项目结构
 - square.html: 参照 MDN 中对 [rotate3d](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d()) 的案例，制作一个正方形。
+- word.html: 参照 [Steven Lei](https://codepen.io/stevenlei/pen/QWGNjKj) 的 CodePen 自己写了一遍，了解要点。
